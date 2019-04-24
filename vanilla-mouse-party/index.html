@@ -58,7 +58,24 @@
 </body>
 
 <script>
+    let mousePostion = {x:0,y:0};
+    let drawId;
+    let container = wrap
+
+    function getRandomNumber(min, max) {
+        return Math.round(Math.random() * (max - min + 1)) + min;
+    };
+
+    window.addEventListener('mousemove', function(mouseMoveEvent){
+        mousePostion.x = mouseMoveEvent.pageX;
+        mousePostion.y = mouseMoveEvent.pageY;
+    });
+    function draw(){
+        setInterval(wrap(),1000);
+    }
 
 </script>
 
 </html>
+
+
